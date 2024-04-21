@@ -43,7 +43,18 @@ EXAMPLES FROM EXECUTION<br>
 
    
 2. Rail Fence Cipher
-   
+
+The Morse code cipher encodes text into sequences of dots and dashes, where each character (letter or number) is mapped to a unique pattern.
+* Encryption 
+In this section, characters are linked to Morse code through a static "table" that defines each character with its corresponding Morse code. To encrypt a text, it is first converted into individual characters, and then each character is transformed into its respective Morse code. A space is added between characters, and if there are spaces in the input text, two spaces are added to signify the beginning of a new word.<br>
+* Decryption 
+In this section, the encrypted Morse code text is split into words, and then the words are broken down into individual Morse code sequences. Each Morse code sequence is converted to its corresponding letter using the static character table. If the Morse code sequence is valid, it is transformed into the corresponding letter. To decrypt, the encrypted text reconstructed from Morse code sequences is read in its original order to recover the plaintext.
+Steps to execute
+- Create a class named MorseCipher.java
+- Run the program
+- Choose the option you need
+- Enter text based on the selected option( plaintext to encrypt or cipher text to decrypt)
+- See the results<br
 ![RailFence](https://github.com/fatjetagashi/Siguri_te_dhenave_Gr5/assets/154750535/3ac5d3ca-0705-4416-a5f4-a540b00317f8)
 
 ![rail fencee](https://github.com/fatjetagashi/Siguri_te_dhenave_Gr5/assets/154750535/0f3436c1-b564-4566-89fa-089d2a87b8ce)
