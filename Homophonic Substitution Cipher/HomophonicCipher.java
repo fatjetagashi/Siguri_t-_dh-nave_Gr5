@@ -56,3 +56,43 @@ public class HomophonicCipher {
 
         return ciphertext.toString().trim();
     }
+//Dekriptimi i Homophonic Substitution Cipher
+public String decrypt(String ciphertext) {
+        StringBuilder plaintext = new StringBuilder();
+        String[] tokens = ciphertext.split(" ");
+
+        for (int i = 0; i < tokens.length; i++) {
+            String token = tokens[i];
+            Character ch = decryptMap.get(token);
+            if (ch != null) {
+                plaintext.append(ch);
+            } else {
+                plaintext.append(token);  // Nëse nuk është kod i njohur, lëre siç është
+            }
+        }
+
+        return plaintext.toString();
+    }
+
+    public void displayMappings() {
+        System.out.println("Homophonic Mappings:");
+        for (Map.Entry<Character, List<String>> entry : encryptMap.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+    }
+
+    public static void main(String[] args) {
+        HomophonicCipher cipher = new HomophonicCipher();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter the message to encrypt:");
+        String message = scanner.nextLine();
+        String encrypted = cipher.encrypt(message);
+        String decrypted = cipher.decrypt(encrypted);
+
+        System.out.println("Message: " + message);
+        System.out.println("Encrypted: " + encrypted);
+        System.out.println("Decrypted: " + decrypted);
+        cipher.displayMappings(); // Shfaq mapimet për verifikim
+        scanner.close();
+    }
+}
