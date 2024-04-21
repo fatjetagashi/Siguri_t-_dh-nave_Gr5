@@ -45,6 +45,7 @@ Steps to execute
 
 EXAMPLES FROM EXECUTION<br>
 1. Homphonic Substitution Cipher
+   
    ![homophonic cipher](https://github.com/fatjetagashi/Siguri_te_dhenave_Gr5/assets/154750535/3fa2cc55-a991-4b00-953b-8929c67dfc0c)
 
    ![code mappings](https://github.com/fatjetagashi/Siguri_te_dhenave_Gr5/assets/154750535/ca38620b-2509-4f95-89ab-f05a325f8898)
@@ -52,7 +53,7 @@ EXAMPLES FROM EXECUTION<br>
 
 
    
-2. Rail Fence Cipher
+3. Rail Fence Cipher
 
 ![RailFence](https://github.com/fatjetagashi/Siguri_te_dhenave_Gr5/assets/154750535/3ac5d3ca-0705-4416-a5f4-a540b00317f8)
 
