@@ -1,4 +1,4 @@
-# Siguri e të dhënave
+# Data Security
 
 ### 1.Homphonic Substitution Cipher
 This program implements a homophonic substitution encryption and decryption algorithm.
@@ -8,7 +8,7 @@ In the Homophonic Substitution Cipher, each letter of the plaintext is replaced 
 * Decryption<br>
 During the decryption phase, the process occurs in reverse. The encrypted message, which is a string of codes or values, is split into segments that match the codes used during encryption. Each code in the encrypted message is mapped back to its corresponding letter based on a predefined hash map created during the encryption phase. In this way, the original text is restored from the encrypted message by using the mapping from codes (values) to letters.<br>
 Steps to execute<br>
- - Create a class named HomophonicCipher.java
+    - Create a class named HomophonicCipher.java
     - Run the program
     - Enter the plaintext to encrypt
     - See encrypted and then decrypted text,as well as code mappings for each letter
@@ -24,7 +24,7 @@ Steps to execute<br>
   - Create a class named RailFence.java
   - Run the program
   - Choose the option you need
-  - Enter text based on the selected option( plaintext to encrypt or cipher text to decrypt)
+  - Enter text based on the selected option( plaintext to encrypt or ciphertext to decrypt)
   - Enter the key
   - See the results
     
@@ -35,12 +35,12 @@ The Morse code cipher encodes text into sequences of dots and dashes, where each
 In this section, characters are linked to Morse code through a static "table" that defines each character with its corresponding Morse code. To encrypt a text, it is first converted into individual characters, and then each character is transformed into its respective Morse code. A space is added between characters, and if there are spaces in the input text, two spaces are added to signify the beginning of a new word.<br>
 * Decryption <br>
 In this section, the encrypted Morse code text is split into words, and then the words are broken down into individual Morse code sequences. Each Morse code sequence is converted to its corresponding letter using the static character table. If the Morse code sequence is valid, it is transformed into the corresponding letter. To decrypt, the encrypted text reconstructed from Morse code sequences is read in its original order to recover the plaintext.<br>
-Steps to execute<br>
-- Create a class named MorseCipher.java
-- Run the program
-- Choose the option you need
-- Enter text based on the selected option( plaintext to encrypt or cipher text to decrypt)
-- See the results<br>
+Steps to execute
+  - Create a class named MorseCipher.java
+  - Run the program
+  - Choose the option you need
+  - Enter text based on the selected option(plaintext to encrypt or ciphertext to decrypt)
+  - See the results<br>
 
 
 EXAMPLES FROM EXECUTION<br>
