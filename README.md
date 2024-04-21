@@ -1,6 +1,17 @@
 # Siguri e të dhënave
 
 ### 1.Homphonic Substitution Cipher
+This program implements a homophonic substitution encryption and decryption algorithm.
+The algorithm uses a unique mapping between letters of the alphabet and a set of four-digit codes to encrypt and then decrypt messages<br>
+* Encryption<br>
+In the Homophonic Substitution Cipher, each letter of the plaintext is replaced with a value from a set of values that correspond to that letter. These codes are predefined, and each letter can have one or more different values to choose from, depending on the frequency of usage in the source language. This variety of codes for a single letter helps to hide the frequency of letter usage, making decoding without the key more difficult. The encryption process selects a random value from the set of codes for each letter in the text and appends these codes to form the encrypted message.
+* Decryption<br>
+During the decryption phase, the process occurs in reverse. The encrypted message, which is a string of codes or values, is split into segments that match the codes used during encryption. Each code in the encrypted message is mapped back to its corresponding letter based on a predefined hash map created during the encryption phase. In this way, the original text is restored from the encrypted message by using the mapping from codes (values) to letters.<br>
+Steps to execute<br>
+ - Create a class named HomophonicCipher.java
+    - Run the program
+    - Enter the plaintext to encrypt
+    - See encrypted and then decrypted text,as well as code mappings for each letter
 
 
 ### 2.Rail Fence Cipher
