@@ -14,7 +14,7 @@ public class HomophonicCipher {
     private void initialize() {
         encryptMap = new HashMap<>();
         decryptMap = new HashMap<>();
-        Set<String> usedCodes = new HashSet<>();  // Mbaj një set për të siguruar që të gjitha kodet janë unike
+        Set<String> usedCodes = new HashSet<>();  
 
         // Frekuenca relative bazuar në anglisht
         int[] frequencies = {8, 2, 3, 4, 12, 2, 3, 6, 7, 1, 1, 4, 3, 7, 8, 2, 1, 6, 6, 9, 3, 1, 2, 1, 2, 1};
@@ -29,8 +29,8 @@ public class HomophonicCipher {
             for (int j = 0; j < frequencies[i]; j++) {
                 String code;
                 do {
-                    code = String.format("%02d", random.nextInt(100)) + String.format("%02d", random.nextInt(100));  // Gjenero kodin random
-                } while (usedCodes.contains(code));  // Kontrollo nëse kodi është tashmë i përdorur
+                    code = String.format("%02d", random.nextInt(100)) + String.format("%02d", random.nextInt(100)); 
+                } while (usedCodes.contains(code));  
                 usedCodes.add(code);
                 codes.add(code);
                 decryptMap.put(code, letter);
@@ -50,7 +50,7 @@ public class HomophonicCipher {
                 String code = codes.get(random.nextInt(codes.size()));
                 ciphertext.append(code).append(" ");
             } else {
-                ciphertext.append(ch).append(" ");  // Nëse nuk është shkronjë, lëre siç është
+                ciphertext.append(ch).append(" ");  
             }
         }
 
@@ -67,7 +67,7 @@ public String decrypt(String ciphertext) {
             if (ch != null) {
                 plaintext.append(ch);
             } else {
-                plaintext.append(token);  // Nëse nuk është kod i njohur, lëre siç është
+                plaintext.append(token);  
             }
         }
 
@@ -92,7 +92,7 @@ public String decrypt(String ciphertext) {
         System.out.println("Message: " + message);
         System.out.println("Encrypted: " + encrypted);
         System.out.println("Decrypted: " + decrypted);
-        cipher.displayMappings(); // Shfaq mapimet për verifikim
+        cipher.displayMappings(); 
         scanner.close();
     }
 }
