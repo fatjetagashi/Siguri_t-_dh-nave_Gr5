@@ -16,10 +16,10 @@ public class HomophonicCipher {
         decryptMap = new HashMap<>();
         Set<String> usedCodes = new HashSet<>();  
 
-        // Frekuenca relative bazuar në anglisht
+        
         int[] frequencies = {8, 2, 3, 4, 12, 2, 3, 6, 7, 1, 1, 4, 3, 7, 8, 2, 1, 6, 6, 9, 3, 1, 2, 1, 2, 1};
 
-        // Alfabeti anglez
+      
         char[] alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
 
         for (int i = 0; i < alphabet.length; i++) {
@@ -56,7 +56,7 @@ public class HomophonicCipher {
 
         return ciphertext.toString().trim();
     }
-//Dekriptimi i Homophonic Substitution Cipher
+
 public String decrypt(String ciphertext) {
         StringBuilder plaintext = new StringBuilder();
         String[] tokens = ciphertext.split(" ");
